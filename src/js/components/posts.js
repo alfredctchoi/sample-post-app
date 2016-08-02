@@ -1,5 +1,5 @@
 require('./posts.scss');
-import React from 'react'
+import React, {PropTypes} from 'react'
 import Post from '../components/post'
 
 
@@ -13,5 +13,15 @@ const Posts = ({posts, selectedPostId, onPostSelect}) => (
         }
     </ul>
 );
+
+Posts.propTypes = {
+  posts: PropTypes.array,
+  selectedPostId: PropTypes.number,
+  onPostSelect: PropTypes.func
+};
+
+Posts.defaultProps = {
+  posts: []
+};
 
 export default Posts;
