@@ -10,7 +10,7 @@ class Comments extends Component {
                 No comments available
             </div>
         }
-
+        
         return <ul className="comment-list">
             {comments.map(comment => <Comment key={comment.id} comment={comment}/>)}
         </ul>
