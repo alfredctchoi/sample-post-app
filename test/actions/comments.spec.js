@@ -8,7 +8,7 @@ import expect from 'expect'
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
 
-describe('async actions', () => {
+describe('comment actions', () => {
   afterEach(() => {
     nock.cleanAll()
   });

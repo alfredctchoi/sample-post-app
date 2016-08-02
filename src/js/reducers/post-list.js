@@ -2,7 +2,6 @@ import {ENUMS as POST_ENUMS} from '../actions/post'
 
 const INITIAL_STATE = {
     posts: [],
-    comments: {},
     selectedPostId: null,
     isLoading: false
 };
