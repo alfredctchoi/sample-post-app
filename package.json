@@ -1,5 +1,5 @@
 {
-  "name": "react-redux-counter",
+  "name": "sample-post-app",
   "version": "1.0.0",
   "description": "Boilerplate project for starting react-redux projects",
   "main": "index.js",
