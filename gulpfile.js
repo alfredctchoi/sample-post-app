@@ -1,3 +1,4 @@
+var Promise = require('es6-promise').Promise;
 var gulp = require('gulp');
 var clean = require('gulp-clean');
 var runSequence = require('run-sequence');
