@@ -1,0 +1,11 @@
+@import "../../variables";
+
+.comments-container {
+  .comment-heading {
+    font-weight: 300;
+    font-size: 16px;
+    border-left: 3px solid $page-background;
+    padding-left: 5px;
+    margin-bottom: 10px;
+  }
+}
