@@ -1,4 +1,5 @@
 import {ROOT_URL} from '../config'
+import fetch from 'isomorphic-fetch'
 
 export const ENUMS = {
     LOADING_POST_COMMENTS: 'LOADING_POST_COMMENTS',
@@ -6,7 +7,8 @@ export const ENUMS = {
 };
 
 const shouldFetchComments = (state) => {
-    const {comments, selectedPostId} = state.postList;
+    const {comments} = state.postComments;
+    const {selectedPostId} = state.postList;
     return comments[selectedPostId] === undefined;
 };
 
