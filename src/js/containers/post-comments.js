@@ -4,7 +4,7 @@ import {connect} from 'react-redux'
 import {loadCommentsIfNeeded} from '../actions/comments'
 import Comments from '../components/comments'
 
-class PostComments extends Component {
+export class PostComments extends Component {
     componentDidMount() {
         const {loadCommentsIfNeeded} = this.props;
         loadCommentsIfNeeded();
