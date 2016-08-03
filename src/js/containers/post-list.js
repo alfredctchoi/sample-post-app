@@ -5,7 +5,7 @@ import {connect} from 'react-redux'
 import {getPosts, selectPost, deselectPost} from '../actions/post'
 import Posts from '../components/posts'
 
-class PostList extends Component {
+export class PostList extends Component {
     constructor(props) {
         super(props);
     }
@@ -16,27 +16,30 @@ class PostList extends Component {
         loadPosts();
     }
 
-    componentWillUnmount(){
+    componentWillUnmount() {
         const {closeAllComments} = this.props;
         document.body.removeEventListener('click', closeAllComments);
     }
 
     render() {
         const {isLoading, posts, selectedPostId, onPostSelect} = this.props;
-        return <div className="post-list-container">
-            {
-                isLoading &&
-                <div>
-                    Loading...
-                </div>
-            }
 
-            {
-                !isLoading && posts.length > 0 &&
-                <Posts posts={posts}
-                       selectedPostId={selectedPostId}
-                       onPostSelect={onPostSelect}/>
-            }
+        if (isLoading) {
+            return <div className="loading">
+                Loading...
+            </div>
+        }
+
+        if (!isLoading && (!posts || posts.length === 0)) {
+            return <div className="posts-not-found">
+                No posts found.
+            </div>;
+        }
+
+        return <div className="post-list-container">
+            <Posts posts={posts}
+                   selectedPostId={selectedPostId}
+                   onPostSelect={onPostSelect}/>
         </div>
     }
 }

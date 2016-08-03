@@ -23,8 +23,8 @@ const setup = (isSelected) => {
   }
 };
 
-describe('components', () => {
-  describe('Post', () => {
+describe('Components', () => {
+  describe('post', () => {
     it('should render itself', () => {
       const {component} = setup();
       const headingEl = component.find('div.heading');

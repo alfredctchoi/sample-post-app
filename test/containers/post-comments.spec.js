@@ -5,7 +5,7 @@ import expect from 'expect';
 import Comments from '../../src/js/components/comments'
 
 describe('Containers', () => {
-    describe('PostComments', () => {
+    describe('post-comments', () => {
         it('should show the loading container', () => {
             const props = {
                 isLoading: true

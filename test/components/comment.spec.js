@@ -19,8 +19,8 @@ const setup = () => {
   }
 };
 
-describe('components', () => {
-  describe('Comment', () => {
+describe('Components', () => {
+  describe('comment', () => {
     it('should render itself', () => {
       const {component} = setup();
       const authorEl = component.find('div.author');

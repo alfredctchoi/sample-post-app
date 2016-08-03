@@ -4,7 +4,7 @@ import Posts from '../../src/js/components/posts'
 import {shallow} from 'enzyme'
 
 describe('Components', () => {
-  describe('Posts', () => {
+  describe('posts', () => {
     it('should render itself', () => {
       const component = shallow(<Posts/>);
       expect(component.length).toBe(1);

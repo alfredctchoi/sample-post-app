@@ -5,7 +5,7 @@ import {shallow} from 'enzyme'
 import Comment from '../../src/js/components/comment'
 
 describe('Components', () => {
-  describe('Comments', () => {
+  describe('comments', () => {
     it('should render itself with 2 children', () => {
       const props = {
         comments: [{
